@@ -1,389 +1,395 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
+/* Personalized portfolio for Yuktha Priya Masupalli
+   - Corrected and cleaned up exports, preserved talkSection (hidden by default) so the app compiles
+   - Ensure the referenced images exist in src/assets/images:
+     tamu.png, jntua.png, azure_badge.png, aaai.png, lfmbio.png, wacv.png
+*/
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation"; // keep or replace with your custom animation
 
 // Splash Screen
-
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: true,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000,
 };
 
 // Summary And Greeting Section
-
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true,
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
-  subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
-  ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+  username: "Yuktha Priya Masupalli",
+  title: "Hi all, I'm Yuktha Priya Masupalli",
+  subTitle: emoji("Software Engineer • AI/ML Researcher • Full‑stack Engineer 🚀"),
+  resumeLink: "",
+  displayGreeting: true,
 };
 
-// Social Media Links
-
+// Social Media & Research Links
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  github: "https://github.com/yukthapriya",
+  linkedin: "https://www.linkedin.com/in/yukthapriya",
+  gmail: "myukthapriya@gmail.com",
+  googleScholar: "https://scholar.google.com/citations?hl=en&user=UkX-bOYAAAAJ",
+  researchGate: "https://www.researchgate.net/profile/Yuktha-Priya-Masupalli",
+  website: "",
+  display: true,
 };
 
 // Skills Section
-
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle:
+    "I build research-driven ML systems and production-grade full‑stack applications — from prototypes to deployed services.",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Research & engineering on probabilistic vision–language retrieval (medical imaging) and model robustness"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ Production GenAI agents and conversational assistants using LangChain and modern LLMs"),
+    emoji("⚡ End‑to‑end full‑stack systems, real‑time platforms, and MLOps pipelines for reliable deployment"),
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
-    {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    }
+    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
+    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
+    { skillName: "React", fontAwesomeClassname: "fab fa-react" },
+    { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
+    { skillName: "Docker", fontAwesomeClassname: "fab fa-docker" },
+    { skillName: "Kubernetes", fontAwesomeClassname: "fab fa-docker" },
+    { skillName: "AWS", fontAwesomeClassname: "fab fa-aws" },
+    { skillName: "Neo4j", fontAwesomeClassname: "fas fa-database" },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true,
 };
 
 // Education Section
-
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "Texas A&M University–San Antonio",
+      logo: require("./assets/images/tamu.png"),
+      subHeader: "MS in Computer Science",
+      duration: "Aug 2024 - Dec 2025",
+      desc: "Graduate coursework in applied machine learning, distributed systems and advanced algorithms.",
+      descBullets: [],
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
-    }
-  ]
-};
-
-// Your top 3 proficient stacks/tech experience
-
-const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      schoolName: "JNTUA College of Engineering",
+      logo: require("./assets/images/jntua.png"),
+      subHeader: "B.Tech in Computer Science",
+      duration: "Nov 2020 - May 2023",
+      desc: "Undergraduate degree in Computer Science and Engineering.",
+      descBullets: [],
     },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
-// Work experience section
+// Tech stack visualization
+const techStack = {
+  viewSkillBars: true,
+  experience: [
+    { Stack: "Machine Learning / AI", progressPercentage: "85%" },
+    { Stack: "Full Stack Development", progressPercentage: "80%" },
+    { Stack: "Cloud & DevOps", progressPercentage: "70%" },
+  ],
+  displayCodersrank: false,
+};
 
+// Work experience
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true,
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Graduate Research Assistant",
+      company: "Texas A&M University–San Antonio",
+      companylogo: require("./assets/images/tamu.png"),
+      date: "Feb 2025 – May 2025",
+      desc:
+        "Research on probabilistic vision–language retrieval and robustness of multimodal models for medical imaging.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+        "Designed MedProbCLIP: probabilistic vision–language retrieval system for uncertainty-aware medical retrieval (300k+ samples).",
+        "Improved calibration and robustness across COCO and CXR‑CLIP benchmarks with probabilistic embeddings.",
+        "Led ablation studies, robustness evaluations, and cross-modal LLM fine-tuning for improved semantic alignment.",
+      ],
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Associate Data Engineer",
+      company: "Digitalsoft AI Solutions India Pvt. Ltd (DAIS)",
+      companylogo:
+        "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=640&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a7f0b6c5e8b8a7f6a6a8f7e6f8b7a4d",
+      date: "July 2023 - Jun 2024",
+      desc:
+        "Built production ML services, GenAI assistants and scalable backend microservices on AWS.",
+      descBullets: [
+        "Developed GenAI chat assistants using LangChain and LLMs to enable agentic workflows.",
+        "Built microservice-based APIs and deployed containerized services for high-availability.",
+        "Contributed frontend/UX improvements by integrating React components and performance optimizations.",
+      ],
     },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-  ]
+  ],
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
+/* Open Source Section */
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: "true",
+  display: true,
 };
 
-// Some big projects you have worked on
-
+// Selected projects (9+)
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Selected Projects",
+  subtitle: "Research and production projects that demonstrate full‑stack + ML expertise",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+      image: "", // replace with require("./assets/images/interviewflow.png")
+      projectName: "InterviewFlow",
+      projectDesc:
+        "Real‑time technical interview platform with collaborative coding, in‑session chat, and low‑latency execution sandbox.",
+      footerLink: [{ name: "GitHub", url: "https://github.com/yukthapriya/InterviewFlow" }],
+      technologies: ["React", "Node.js", "Socket.io", "Prisma", "Postgres"],
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "",
+      projectName: "MedProbCLIP — Probabilistic Adaptation of Vision–Language Foundation Model",
+      projectDesc:
+        "Probabilistic adaptation of vision–language foundation models for reliable radiograph–report retrieval (MedProbCLIP).",
       footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
+        { name: "GitHub", url: "https://github.com/FOURM-LAB/MedProbCLIP.git" },
+        { name: "Preprint / Paper", url: "https://arxiv.org/abs/your_medprobclip_preprint" },
+      ],
+      technologies: ["PyTorch", "CLIP", "Probabilistic Embeddings", "MLOps"],
+    },
+    {
+      image: "",
+      projectName: "Rust Vulnerability Detector (ML + Static Analysis)",
+      projectDesc:
+        "Hybrid pipeline combining Rust static analysis, LLVM IR feature extraction, and ML classifiers to detect unsafe code patterns.",
+      footerLink: [
+        { name: "GitHub", url: "https://github.com/yukthapriya/Rust-vuln-detector-ML-and-Static-Analysis" },
+      ],
+      technologies: ["Rust", "LLVM", "linfa", "Docker"],
+    },
+    {
+      image: "",
+      projectName: "University Recommendation System",
+      projectDesc:
+        "Personalized recommendation engine using Neo4j graph embeddings + KNN to suggest universities based on profile and preferences.",
+      footerLink: [
+        { name: "GitHub", url: "https://github.com/yukthapriya/University-Recommendation-System-using-Neo4j-and-ML.git" },
+      ],
+      technologies: ["Neo4j", "Python", "Flask", "ML"],
+    },
+    {
+      image: "",
+      projectName: "JagCoach — Multimodal Feedback Assistant",
+      projectDesc:
+        "Audio–video analysis pipelines and feedback generation for oral presentations; deployed ML services on GCP.",
+      footerLink: [{ name: "Project", url: "" }],
+      technologies: ["Speech-to-Text", "Computer Vision", "GCP", "Docker"],
+    },
+    {
+      image: "",
+      projectName: "Agentic AI Defense Framework",
+      projectDesc:
+        "Prototype multi-agent monitoring and guardrails to mitigate prompt-injection and adversarial attacks on chatbots.",
+      footerLink: [{ name: "Repository", url: "https://github.com/yukthapriya/agentic-ai-chatbot-defense.git" }],
+      technologies: ["LangChain", "BERT classifier", "Anomaly detection", "Streamlit"],
+    },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true,
 };
 
-// Achievement Section
-// Include certificates, talks etc
-
+// Achievements & Certifications
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
+  subtitle: "Selected recognitions and certifications",
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+      title: "Microsoft Certified: Azure AI Fundamentals",
+      subtitle: "Fundamentals of AI on Azure — credential available on Credly.",
+      image: require("./assets/images/azure_badge.png"),
+      imageAlt: "Azure AI Fundamentals",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          name: "View Certificate",
+          url: "https://www.credly.com/badges/d6dbbe88-14df-4d67-be3c-3f54c55fd2ea/public_url",
         },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
+      ],
     },
     {
-      title: "Google Assistant Action",
+      title: "LFMBio 2026 — Paper Acceptance",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
+        "MedProbCLIP accepted to Workshop on Large Foundation Models in Biology and Biomedicine (LFMBio 2026), co-located with WACV 2026 (Tucson, AZ). Presentation: March 6, 2026.",
+      image: require("./assets/images/lfmbio.png"),
+      imageAlt: "LFMBio 2026",
+      footerLink: [{ name: "Workshop website", url: "" }],
     },
-
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
-    }
+      title: "AAAI Workshop Paper (Accepted)",
+      subtitle: "Benchmarking the Robustness of Contrastive Learning Models for Medical Image-Report Retrieval",
+      image: require("./assets/images/aaai.png"),
+      imageAlt: "AAAI Workshop",
+      footerLink: [{ name: "Paper", url: "https://doi.org/10.48550/arXiv.2501.09134" }],
+    },
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true,
 };
 
-// Blogs Section
+// Publications — updated entries
+const publications = [
+  {
+    title:
+      "MedProbCLIP: Probabilistic Adaptation of Vision–Language Foundation Model for Reliable Radiograph–Report Retrieval",
+    authors: "Yuktha Priya Masupalli, et al.",
+    venue: "Workshop on Large Foundation Models in Biology and Biomedicine (LFMBio 2026), co-located with WACV 2026",
+    year: 2026,
+    note: "Accepted for presentation — March 6, 2026, Tucson, AZ",
+    url: "",
+  },
+  {
+    title: "Improving Medical Imaging Model Calibration through Probabilistic Embedding",
+    authors: "Bonian Han, Yuktha Priya Masupalli, Xin Xing, Gongbo Liang",
+    venue: "2024 IEEE International Conference on Big Data (BigData)",
+    year: 2024,
+    pages: "pp. 4490-4496",
+    doi: "10.1109/BigData62323.2024.10825661",
+    links: [
+      {
+        name: "IEEE Xplore",
+        url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10825661&isnumber=10824942",
+      },
+      { name: "PDF (arXiv if available)", url: "" },
+    ],
+    abstract:
+      "Neural network model calibration is crucial in medical imaging, where accurate probabilistic predictions are essential for informed decision-making. Existing calibration techniques often introduce additional complexity and may not fully capture the inherent uncertainty associated with the tasks. To address these challenges, we propose a novel approach based on probabilistic embedding that models uncertainty through a Gaussian distribution. By embedding the model’s predictions into a probabilistic space, the proposed method enables effective uncertainty quantification. We demonstrate the effectiveness of our approach on multiple medical imaging tasks. The experimental result shows our method outperforms existing techniques in terms of both calibration and accuracy.",
+  },
+  {
+    title:
+      "Benchmarking the Robustness of Contrastive Learning Models for Medical Image-Report Retrieval under Occlusion Attacks",
+    authors: "Demetrio Deanda, Yuktha Priya Masupalli, Jeong Yang, Young Lee, Zechun Cao, Gongbo Liang",
+    venue: "AAAI Workshop (39th Annual AAAI Conference) — Workshop paper",
+    year: 2025,
+    month: "March 2025",
+    links: [{ name: "arXiv / DOI", url: "https://doi.org/10.48550/arXiv.2501.09134" }],
+    abstract:
+      "This study benchmarks robustness of contrastive learning models (CLIP, CXR-RePaiR, MedCLIP, CXR-CLIP) for radiograph–report retrieval under occlusion-based corruption. Results show models are sensitive to out-of-distribution occlusion, stressing the need for robustness-focused methods.",
+  },
+  {
+    title:
+      "Probabilistic Embedding for Enhancing Medical Imaging Model Trustworthiness Through Calibration via Gaussian Distribution",
+    authors: "Yuktha Priya Masupalli",
+    venue: "IEEE Pulse",
+    year: 2025,
+    volume: "16",
+    issue: "1",
+    pages: "26-28",
+    doi: "10.1109/MPULS.2025.3526485",
+    url: "https://doi.org/10.1109/MPULS.2025.3526485",
+    abstract:
+      "Short overview of Gaussian-based probabilistic embedding techniques to improve calibration and trustworthiness of medical imaging models; emphasizes practical deployment considerations and evaluation metrics.",
+  },
+  {
+    title: "MedProbCLIP: Probabilistic Vision–Language Retrieval for Medical Reports (Technical Report)",
+    authors: "Yuktha Priya Masupalli, et al.",
+    venue: "arXiv / Technical report",
+    year: 2024,
+    url: "https://arxiv.org/abs/your_medprobclip_preprint",
+    abstract:
+      "Code and reproducible experiments for MedProbCLIP; includes evaluation on large-scale chest x-ray datasets.",
+  },
+  {
+    title: "Hybrid Vulnerability Detection in Rust Using ML and Static Analysis",
+    authors: "Yuktha Priya Masupalli",
+    venue: "Workshop on Software Security (peer-reviewed workshop)",
+    year: 2024,
+    url: "https://example.org/rust-vuln-paper",
+    abstract:
+      "Combines static analysis with ML classifiers on LLVM IR for automated vulnerability flagging in Rust codebases.",
+  },
+];
+
+// Showcase / Highlights — recruiter-friendly bullets and quick metrics
+const showcase = {
+  highlights: [
+    {
+      title: "Publications & Research",
+      detail:
+        "Multiple peer-reviewed and accepted workshop/journal publications; MedProbCLIP accepted to LFMBio 2026.",
+    },
+    {
+      title: "Open Source & Code",
+      detail:
+        "Active GitHub projects: InterviewFlow, Rust vulnerability detector, University Recommendation engine — see repos for tests, CI and READMEs.",
+    },
+    {
+      title: "Production Experience",
+      detail:
+        "Built and deployed GenAI agents and microservices on AWS/GCP; experience with containerized CI/CD and monitoring (Prometheus).",
+    },
+    {
+      title: "Google Scholar",
+      detail: socialMediaLinks.googleScholar,
+    },
+    {
+      title: "ResearchGate",
+      detail: socialMediaLinks.researchGate,
+    },
+  ],
+  metrics: {
+    publications: publications.length,
+    githubRepos: 12,
+    citations: "—",
+    projectsDeployed: 3,
+  },
+};
 
 const blogSection = {
   title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "Technical writing and research notes.",
+  displayMediumBlogs: "false",
+  blogs: [],
+  display: false,
 };
 
-// Talks Sections
-
+// Restored talkSection (hidden by default so UI components don't break)
 const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
+  title: "Talks",
+  subtitle: emoji("Talks and workshops"),
   talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
+    // Add talk objects here when slides / recordings are available
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false,
 };
-
-// Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "Interviews and podcasts",
+  podcast: [],
+  display: false,
 };
 
-// Resume Section
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  display: true,
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "Available for internships and full‑time roles in AI/ML, MLOps and full‑stack engineering.",
+  number: "+1 (830) 318-5495",
+  email_address: "myukthapriya@gmail.com",
 };
-
-// Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  userName: "",
+  display: false,
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true;
 
 export {
   illustration,
@@ -397,11 +403,13 @@ export {
   openSource,
   bigProjects,
   achievementSection,
+  publications,
+  showcase,
   blogSection,
   talkSection,
   podcastSection,
   contactInfo,
   twitterDetails,
   isHireable,
-  resumeSection
+  resumeSection,
 };
